@@ -1,25 +1,32 @@
-import Hero from "./components/Hero"
-import Navbar from "./components/Navbar"
-import AboutMe from "./components/AboutMe"
-import Technologies from "./components/Technologies"
-import Experience from "./components/Experience"
-
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import AboutMe from "./components/AboutMe";
+import Technologies from "./components/Technologies";
+import Experience from "./components/Experience";
+import Sparkles from "./components/Sparkles";
 
 const App = () => {
-  return <>
-    <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-sky-500 selection:text-sky-900"></div>
-    <div className="fixed top-0 -z-10 h-full w-full">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 bg-gradient-to-tr from-[#1e293b] via-[#6366f1] to-[#71717a]"></div>
-    </div>
+  return (
+    <>
+      {/* Fond sombre avec Sparkles */}
+      <div className="relative overflow-x-hidden h-full min-h-screen bg-neutral-900 text-neutral-300 antialiased selection:bg-sky-500 selection:text-sky-900">
+        {/* Sparkles couvrent toute la page */}
+        <Sparkles
+          density={1200}
+          className="absolute inset-0 h-full w-full pointer-events-none"
+        />
 
-    <div className="container mx-auto px-8">
-      <Navbar />
-      <Hero />
-      <AboutMe />
-      <Technologies />
-      <Experience />
-    </div>
-  </>
-}
+        {/* Contenu principal */}
+        <div className="relative container mx-auto px-8 z-10">
+          <Navbar />
+          <Hero />
+          <AboutMe />
+          <Technologies />
+          <Experience />
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default App
+export default App;

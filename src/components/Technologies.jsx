@@ -27,7 +27,7 @@ const Technologies = () => {
         <FaNodeJs className="text-7xl text-cyan-400" />
       </div>
       <div className="rounded-2xl border-4 border-neutral-400 p-4">
-        <BiLogoPostgresql className="text-7xl text-cyan-400" />
+        <BiLogoPostgresql className="text-7xl text-blue-400" />
       </div>
       <div className="rounded-2xl border-4 border-neutral-400 p-4">
         <DiSymfonyBadge className="text-7xl text-black" />
