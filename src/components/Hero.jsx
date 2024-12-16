@@ -30,18 +30,17 @@ const Hero = () => {
                                 animate-[shine_3s_linear_infinite]
                             "></span>
                         </h1>
-                        <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">
+                        <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
                             <Typewriter
                                 options={{
                                     strings: [
                                         'Full Stack Développeur',
-                                        'Etudiant en BTS SIO',
+                                        'Etudiant en BTS Services informatiques aux organisations',
                                         'Passionné de développement web',
-                                        'Développeur Mobile Android'
                                     ],
                                     autoStart: true,
                                     loop: true,
-                                    deleteSpeed: 50,
+                                    deleteSpeed: 100,
                                 }}
                             />
                         </span>
