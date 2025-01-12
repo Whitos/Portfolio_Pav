@@ -75,7 +75,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 lg:p-8">
-                    <div className="flex justify-end translate-x-10 translate-y-32 p-24">
+                    <div className="flex justify-end translate-x-10 translate-y-24 p-24">
                         <img
                             className="rounded-lg shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)]"
                             src={profilePic}
