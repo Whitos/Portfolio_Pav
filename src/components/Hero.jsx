@@ -24,7 +24,7 @@ const Hero = () => {
     };
 
     return (
-        <div className="text-white border-b border-neutral-900 pb-4 lg:mb-35">
+        <div id="debut" className="text-white border-b border-neutral-900 pb-4 lg:mb-35 p-10">
             <div className="flex flex-wrap">
                 <div className="w-full lg:w-1/2">
                     <div className="flex flex-col items-center lg:items-start">
@@ -75,7 +75,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 lg:p-8">
-                    <div className="flex justify-center">
+                    <div className="flex justify-center p-24">
                         <img
                             className="rounded-lg shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)]"
                             src={profilePic}

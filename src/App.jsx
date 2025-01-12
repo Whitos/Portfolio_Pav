@@ -10,15 +10,12 @@ import Contact from "./components/Contact";
 const App = () => {
   return (
     <>
-      {/* Fond sombre avec Sparkles */}
       <div className="relative overflow-x-hidden h-full min-h-screen bg-neutral-900 text-neutral-300 antialiased selection:bg-sky-500 selection:text-sky-900">
-        {/* Sparkles couvrent toute la page */}
         <Sparkles
           density={1200}
           className="absolute inset-0 h-full w-full pointer-events-none"
         />
 
-        {/* Contenu principal */}
         <div className="relative container mx-auto px-8 z-10">
           <Navbar />
           <Hero />

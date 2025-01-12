@@ -8,7 +8,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { DiSymfonyBadge } from "react-icons/di";
 
 const Technologies = () => {
-  return <div className="border-b border-neutral-800 pb-24">
+  return <div id="technologies" className="border-b border-neutral-800 pb-24">
     <h2 className="my-20 text-center text-4xl text-white">Technologies</h2>
     <div className="flex flex-wrap items-center justify-center gap-4">
       <div className="rounded-2xl border-4 border-neutral-400 p-4">

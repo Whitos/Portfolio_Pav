@@ -1,7 +1,7 @@
 import { EXPERIENCES } from "../constants"
 
 const Experience = () => {
-    return <div className="border-b border-neutral-800 pb-4">
+    return <div id="experience" className="border-b border-neutral-800 pb-4">
         <h2 className="my-20 text-center text-4xl text-white">Experience</h2>
         <div>
             {EXPERIENCES.map((experience, index) => (
