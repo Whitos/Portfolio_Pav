@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { Navigation } from "./Navigation";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
   const items = [
@@ -20,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="top-0  translate-x-1/4 flex fixed justify-center py-6 z-50">
+    <nav className="top-0 translate-x-1/2 flex fixed justify-center py-6 z-50">
 
       <div className="shrink-0 overflow-hidden rounded-full">
         <Navigation
@@ -34,9 +33,9 @@ const Navbar = () => {
                   <button
                     className={clsx(
                       isActive
-                        ? "text-white/75 text-shadow-sm"
-                        : "text-white/60 hover:text-white/75",
-                      "inline-block px-4 py-1.5 text-sm font-light transition-[text-shadow,color] duration-300"
+                        ? "text-white text-shadow-lg brightness-110" // Texte lumineux si actif
+                        : "text-white/60 hover:text-white/80",
+                      "inline-block px-4 py-1.5 text-sm font-light transition-[text-shadow,color,brightness] duration-300" // Style original
                     )}
                     onClick={() => {
                       setActive();
@@ -50,11 +49,6 @@ const Navbar = () => {
             ))}
           </Navigation.List>
         </Navigation>
-      </div>
-
-      <div className="text-white mb-8 flex items-center justify-center gap-4 text-2xl">
-        <FaLinkedin />
-        <FaGithub />
       </div>
     </nav>
   );

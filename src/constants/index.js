@@ -3,9 +3,9 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
-export const HERO_CONTENT = `Je suis un développeur web passionné, spécialisé dans la création d'applications intuitives et performantes. Grâce à mes expériences avec des technologies comme React, Symfony, et MySQL, je m'efforce de proposer des solutions modernes et efficaces. Toujours à la recherche de nouveaux défis, j'aspire à développer des applications qui allient performance et expérience utilisateur de qualité.`;
+export const HERO_CONTENT = `Je suis un développeur web passionné, spécialisé dans la création d'applications intuitives et performantes. Grâce à mes expériences avec des technologies comme React, PHP, et SQL, je m'efforce de proposer des solutions modernes et efficaces. Toujours à la recherche de nouveaux défis, j'aspire à développer des applications qui allient performance et expérience utilisateur de qualité.`;
 
-export const MOTIVATION = 'Autonome et motivé, je suis toujours à la recherche de nouveaux défis pour continuer à apprendre et à évoluer en tant que développeur. Explorez mes projets pour découvrir mon parcours et mes compétences !';
+export const MOTIVATION = 'Autonome et motivé, je suis toujours à la recherche de nouveaux défis pour continuer à apprendre et à évoluer en tant que développeur. Explorez mes projets pour découvrir mon parcours et mes compétences ! 👇';
 
 export const ABOUT_TEXT = `Développeur web en formation, j'ai acquis des compétences dans divers langages et frameworks tels que HTML/CSS, PHP, Java et Symfony. Mon intérêt actuel se tourne vers React, où je m'efforce d'approfondir mes connaissances pour concevoir des interfaces dynamiques. Mon parcours est guidé par une curiosité technique et une volonté d'apprendre constamment. J'apprécie de travailler en équipe et de résoudre des problèmes complexes. En dehors du développement, je pratique le Street Lifting, une activité qui m'a appris rigueur, discipline et persévérance.`;
 

@@ -8,10 +8,10 @@ const Hero = () => {
 
     const letterAnimation = {
         visible: (i) => ({
-            textShadow: "0px 0px 8px rgba(255, 255, 255, 1)", // Glow blanc lumineux
+            textShadow: "0px 0px 8px rgba(255,255,255,1)", // Glow blanc lumineux
             color: "white", // Maintenir la couleur blanche
             transition: {
-                delay: i * 0.4, // Décalage progressif entre les lettres
+                delay: i * 1.0, // Décalage progressif entre les lettres
                 duration: 1.0, // Durée d'illumination
                 repeat: Infinity, // Boucle infinie
                 repeatType: "reverse", // Retourne à l'état initial
@@ -31,11 +31,11 @@ const Hero = () => {
                         <h1
                             className="
                                 pb-16 
-                                text-6xl 
+                                text-9xl 
                                 font-thin 
                                 tracking-tight 
-                                lg:mt-16 
-                                lg:text-8xl
+                                lg:mt-14 
+                                lg:text-10xl
                                 relative 
                                 overflow-hidden
                             "
@@ -44,8 +44,8 @@ const Hero = () => {
                                 <motion.span
                                     key={index}
                                     custom={index}
-                                    initial="hidden" // Pas de glow au départ
-                                    animate="visible" // Active l'animation glow
+                                    initial="hidden"
+                                    animate="visible"
                                     variants={letterAnimation}
                                     className="inline-block"
                                 >
@@ -53,21 +53,21 @@ const Hero = () => {
                                 </motion.span>
                             ))}
                         </h1>
-                        <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
+                        <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-2xl tracking-tight text-transparent">
                             <Typewriter
                                 options={{
                                     strings: [
-                                        "Full Stack Développeur",
                                         "Etudiant en BTS Services informatiques aux organisations",
+                                        "Full Stack Développeur",
                                         "Passionné de développement web",
                                     ],
                                     autoStart: true,
                                     loop: true,
-                                    deleteSpeed: 100,
+                                    deleteSpeed: 1.0,
                                 }}
                             />
                         </span>
-                        <p className="my-2 max-w-xl py-6 font-light tracking-tighter">
+                        <p className="my-10 max-w-xl py-6 from-neutral-600 tracking-tighter text-lg">
                             {HERO_CONTENT} <br />
                             <br />
                             {MOTIVATION}
@@ -75,7 +75,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 lg:p-8">
-                    <div className="flex justify-center p-24">
+                    <div className="flex justify-end translate-x-10 translate-y-32 p-24">
                         <img
                             className="rounded-lg shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)]"
                             src={profilePic}
