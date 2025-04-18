@@ -69,15 +69,9 @@ const Navbar = () => {
         )}
       >
         <div className={clsx(
-          "w-full max-w-6xl px-4 flex items-center justify-between",
+          "w-full max-w-6xl px-4 flex items-center justify-center", // Changé "justify-between" en "justify-center"
           scrolled ? "py-2" : "py-4"
         )}>
-          {/* Logo ou nom */}
-          <div className="text-white font-bold text-xl">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              Portfolio
-            </span>
-          </div>
 
           {/* Menu de navigation desktop */}
           <div className="hidden md:block shrink-0 overflow-hidden rounded-full">
@@ -115,7 +109,7 @@ const Navbar = () => {
 
           {/* Bouton menu mobile */}
           <button 
-            className="md:hidden text-white p-2 rounded-lg hover:bg-white/10"
+            className="md:hidden absolute right-4 text-white p-2 rounded-lg hover:bg-white/10" // Ajouté "absolute right-4" pour le positionner à droite
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
