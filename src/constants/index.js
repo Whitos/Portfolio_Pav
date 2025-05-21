@@ -11,10 +11,10 @@ export const ABOUT_TEXT = `Développeur web en formation, j'ai acquis des compé
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
+    year: "2023 - 2025",
     role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
+    company: "Lycée Gabriel Fauré",
+    description: `(2e année )`,
     technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
   },
   {
