@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import profilePic from "../assets/imgProfile.jpg";
+import profilePic from "/assets/imgProfile.jpg";
 import { HERO_CONTENT, MOTIVATION } from "../constants";
 
 const Hero = () => {

@@ -7,18 +7,40 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Env & local config
+.env
 *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+dist/
+dist-ssr/
+out/
+
+# System files
 .DS_Store
+Thumbs.db
+
+# IDE / Editor folders
+.vscode/
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Git backup
+*.orig
+
+# Optional: OS-specific
+ehthumbs.db
+Icon?
+
+# Optional: macOS metadata
+.AppleDouble
+.LSOverride

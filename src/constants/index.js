@@ -1,7 +1,7 @@
-import projet1 from "../assets/projects/projet1.png";
-import projet1_1 from "../assets/projects/projet1.1.png";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
+import projet1 from "/assets/projects/projet1.png";
+import projet1_1 from "/assets/projects/projet1.1.png";
+import project2 from "/assets/projects/project-2.jpg";
+import project3 from "/assets/projects/project-3.jpg";
 
 export const HERO_CONTENT = `Je suis un développeur web passionné, spécialisé dans la création d'applications intuitives et performantes. Grâce à mes expériences avec des technologies comme React, PHP, et SQL, je m'efforce de proposer des solutions modernes et efficaces. Toujours à la recherche de nouveaux défis, j'aspire à développer des applications qui allient performance et expérience utilisateur de qualité.`;
 
@@ -12,33 +12,27 @@ export const ABOUT_TEXT = `Développeur web en formation, j'ai acquis des compé
 export const EXPERIENCES = [
   {
     year: "2023 - 2025",
-    role: "Senior Full Stack Developer",
-    company: "Lycée Gabriel Fauré",
-    description: `(2e année )`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    role: "BTS SIO SLAM",
+    company: "Lycée Gabriel Fauré - Annecy",
+    description: `Développement web (PHP, Symfony, Java), base de données, projets en autonomie, travail en équipe.`,
+    technologies: ["PHP", "Symfony", "MySQL", "Tailwind CSS", "Wordpress", "Java"],
   },
   {
     year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    role: "BUT Informatique (1ère année)",
+    company: "IUT Annecy",
+    description: `Premiers projets en développement, bases d'algorithmie, C#, introduction aux bases de données.`,
+    technologies: ["C#", "SQL", "Python", "PHP", "Réseau"],
   },
   {
     year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
-];
+    role: "BAC STI2D SIN",
+    company: "Lycée Jules Verne - Cergy",
+    description: `Projet technique en électronique et programmation, approche réseau.`,
+    technologies: ["Arduino", "Raspberry Pi", "HTML/CSS"],
+  }
+]
+
 
 export const PROJECTS = [
   {
