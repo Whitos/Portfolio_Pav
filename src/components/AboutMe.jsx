@@ -1,4 +1,4 @@
-import aboutImg from "/assets/about.jpg"
+//import aboutImg from "/assets/about.jpg"
 import { ABOUT_TEXT } from "../constants"
 
 const AboutMe = () => {
@@ -9,9 +9,9 @@ const AboutMe = () => {
             </h2>
             <div className="flex flex-wrap">
                 <div className="w-full lg:w-1/2 lg:p-8">
-                    <div className="flex items-center justify-center">
+                    {/* <div className="flex items-center justify-center">
                         <img className="rounded-lg" src={aboutImg} alt="about" />
-                    </div>
+                    </div> */}
                 </div>
                 <div className="w-full lg:w-1/2">
                     <div className="flex justify-center lg:justify-start text-white">
