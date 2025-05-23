@@ -6,6 +6,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("debut");
+  const [progress, setProgress] = useState(0);
 
   const items = [
     { name: "Début", id: "debut", icon: "🏠" },
@@ -13,27 +14,28 @@ const Navbar = () => {
     { name: "Technologies", id: "technologies", icon: "💻" },
     { name: "Experience", id: "experience", icon: "📈" },
     { name: "Projets", id: "projets", icon: "🚀" },
+    { name: "Documents", id: "documents", icon: "📄" },
     { name: "Contact", id: "contact", icon: "✉️" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      // Détecter si l'utilisateur a scrollé pour changer l'apparence de la navbar
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
 
-      // Détection automatique de la section active basée sur le scroll
-      const sections = items.map(item => ({
-        id: item.id,
-        element: document.getElementById(item.id),
-      })).filter(item => item.element);
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolledPercent = (window.scrollY / scrollHeight) * 100;
+      setProgress(scrolledPercent);
+
+      const sections = items
+        .map((item) => ({
+          id: item.id,
+          element: document.getElementById(item.id),
+        }))
+        .filter((item) => item.element);
 
       if (sections.length) {
         const currentPosition = window.scrollY + 100;
-        
+
         for (let i = sections.length - 1; i >= 0; i--) {
           const section = sections[i];
           if (section.element.offsetTop <= currentPosition) {
@@ -48,7 +50,7 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [activeSection, items]);
+  }, [activeSection]);
 
   const handleScroll = (id) => {
     const element = document.getElementById(id);
@@ -61,19 +63,15 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Version desktop */}
-      <nav 
+      {/* Navbar desktop */}
+      <nav
         className={clsx(
           "top-0 left-0 right-0 fixed flex justify-center py-4 z-50 transition-all duration-300",
           scrolled ? "bg-black/70 backdrop-blur-md shadow-lg" : "bg-transparent"
         )}
       >
-        <div className={clsx(
-          "w-full max-w-6xl px-4 flex items-center justify-center", // Changé "justify-between" en "justify-center"
-          scrolled ? "py-2" : "py-4"
-        )}>
-
-          {/* Menu de navigation desktop */}
+        <div className="w-full max-w-6xl px-4 flex items-center justify-center">
+          {/* Menu desktop */}
           <div className="hidden md:block shrink-0 overflow-hidden rounded-full">
             <Navigation
               as="nav"
@@ -81,22 +79,19 @@ const Navbar = () => {
             >
               <Navigation.List as="ul" className="relative flex items-center gap-2">
                 {items.map((item, index) => (
-                  <Navigation.Item key={index} as="li" active={activeSection === item.id} onActivated={() => handleScroll(item.id)}>
-                    {({ setActive, isActive }) => (
+                  <Navigation.Item key={index} as="li" active={activeSection === item.id}>
+                    {() => (
                       <button
                         className={clsx(
                           "relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full",
-                          isActive || activeSection === item.id
+                          activeSection === item.id
                             ? "text-white bg-white/10"
                             : "text-white/70 hover:text-white hover:bg-white/5"
                         )}
-                        onClick={() => {
-                          setActive();
-                          handleScroll(item.id);
-                        }}
+                        onClick={() => handleScroll(item.id)}
                       >
                         <span className="relative z-10">{item.name}</span>
-                        {(isActive || activeSection === item.id) && (
+                        {activeSection === item.id && (
                           <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-sm" />
                         )}
                       </button>
@@ -107,27 +102,29 @@ const Navbar = () => {
             </Navigation>
           </div>
 
-          {/* Bouton menu mobile */}
-          <button 
-            className="md:hidden absolute right-4 text-white p-2 rounded-lg hover:bg-white/10" // Ajouté "absolute right-4" pour le positionner à droite
+          {/* Menu mobile toggle */}
+          <button
+            className="md:hidden absolute right-4 text-white p-2 rounded-lg hover:bg-white/10"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
               {mobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
         </div>
       </nav>
 
-      {/* Menu mobile */}
-      <div className={clsx(
-        "fixed inset-0 z-40 bg-black/90 backdrop-blur-md md:hidden transition-transform duration-300 ease-in-out",
-        mobileMenuOpen ? "translate-y-0" : "translate-y-full"
-      )}>
+      {/* Mobile menu */}
+      <div
+        className={clsx(
+          "fixed inset-0 z-40 bg-black/90 backdrop-blur-md md:hidden transition-transform duration-300 ease-in-out",
+          mobileMenuOpen ? "translate-y-0" : "translate-y-full"
+        )}
+      >
         <div className="flex flex-col items-center justify-center h-full space-y-6 p-4">
           {items.map((item, index) => (
             <button
@@ -149,15 +146,13 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Indicateur de progression */}
-      <div 
+      {/* Barre de progression */}
+      <div
         className={clsx(
           "fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-50 transition-opacity duration-300",
           scrolled ? "opacity-100" : "opacity-0"
         )}
-        style={{ 
-          width: `${(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100}%`
-        }}
+        style={{ width: `${progress}%` }}
       />
     </>
   );

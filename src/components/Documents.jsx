@@ -17,7 +17,7 @@ const Documents = () => {
         {/* CV */}
         <div className="flex flex-col justify-between h-[540px] bg-gradient-to-br from-[#111] to-[#1c1c1c] p-6 rounded-2xl shadow-xl border border-white/10 hover:shadow-cyan-500/20 transition-all duration-300">
           <div className="text-center">
-            <h3 className="text-2xl font-semibold mb-6 text-cyan-300">
+            <h3 className="text-2xl font-semibold mb-6 text-violet-400">
               Mon CV
             </h3>
 
@@ -32,7 +32,7 @@ const Documents = () => {
           <a
             href="/assets/documents/CV_Pavel_Tsanev.pdf"
             download="CV_Pavel_Tsanev.pdf"
-            className="mt-6 inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 mx-auto"
+            className="mt-6 inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 mx-auto"
           >
             <Download className="w-5 h-5" /> Télécharger
           </a>
@@ -41,7 +41,7 @@ const Documents = () => {
         {/* Tableau de compétences */}
         <div className="flex flex-col justify-between h-[540px] bg-gradient-to-br from-[#111] to-[#1c1c1c] p-6 rounded-2xl shadow-xl border border-white/10 hover:shadow-cyan-500/20 transition-all duration-300">
           <div className="text-center">
-            <h3 className="text-2xl font-semibold mb-6 text-cyan-300">
+            <h3 className="text-2xl font-semibold mb-6 text-violet-400">
               Tableau de compétences
             </h3>
 
@@ -56,7 +56,7 @@ const Documents = () => {
           <a
             href="/assets/documents/Tableau_Competences.pdf"
             download="Tableau_Competences.pdf"
-            className="mt-6 inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 mx-auto"
+            className="mt-6 inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 mx-auto"
           >
             <Download className="w-5 h-5" /> Télécharger
           </a>
@@ -65,7 +65,7 @@ const Documents = () => {
         {/* Veille Technologique */}
         <div className="flex flex-col justify-between h-[540px] bg-gradient-to-br from-[#111] to-[#1c1c1c] p-6 rounded-2xl shadow-xl border border-white/10 hover:shadow-cyan-500/20 transition-all duration-300">
           <div className="text-center">
-            <h3 className="text-2xl font-semibold mb-6 text-cyan-300">
+            <h3 className="text-2xl font-semibold mb-6 text-violet-400">
               Veille Technologique
             </h3>
 
@@ -80,7 +80,7 @@ const Documents = () => {
           <a
             href="/assets/documents/Veille_Technologique.pdf"
             download="Tableau_Competences.pdf"
-            className="mt-6 inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 mx-auto"
+            className="mt-6 inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 mx-auto"
           >
             <Download className="w-5 h-5" /> Télécharger
           </a>

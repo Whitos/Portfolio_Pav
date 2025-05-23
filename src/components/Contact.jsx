@@ -106,7 +106,7 @@ const Contact = () => {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-2 px-4 rounded-lg transition-all"
+          className="w-full bg-violet-600 hover:bg-violet-500 text-white font-bold py-2 px-4 rounded-lg transition-all"
         >
           {isSubmitting ? "Envoi..." : "Envoyer"}
         </Button>
